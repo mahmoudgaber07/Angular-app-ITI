@@ -1,0 +1,17 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand noselect" routerLink="/">Angular-App</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse  justify-content-end" id="navbarNav">
+      <ul class="navbar-nav noselect">
+        <li class="nav-item"><a class="nav-link active" routerLink="/">Porfolio</a></li>
+        <li class="nav-item"><a class="nav-link text-white" routerLink="/product">E-Commerce</a></li>
+        <li class="nav-item"><a class="nav-link text-white" routerLink="/register">Register</a></li>
+        <li class="nav-item"><a class="nav-link text-white" routerLink="/login">Login</a></li>
+        <li class="nav-item"><a class="nav-link text-white" routerLink="/cart"><i class="fas fa-shopping-cart"></i>{{count}}</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

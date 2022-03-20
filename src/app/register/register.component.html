@@ -1,0 +1,75 @@
+<section class="h-100">
+  <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6 py-5">
+          <div class="card">
+            <div class="card-body p-5 bg-dark text-white" style="border-radius: 1rem;">
+              <h2 class="text-uppercase text-center mb-5 noselect">Create an account</h2>
+
+              <form [formGroup]="signupForm" (ngSubmit)="signupSubBtn()">
+
+                <div class="form-outline mb-4">
+                  <label class="form-label noselect" for="form3Example1cg">Your Name</label>
+                  <input type="text" id="form3Example1cg" class="form-control form-control-lg" name="username" formControlName="sname"  />
+                </div>
+                <div *ngIf="sigupFormControls['sname'].touched && !sigupFormControls['sname'].valid">
+                  <small class="text-danger" *ngIf="sigupFormControls['sname'].errors?.['required']">This field is required</small>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <label class="form-label noselect" for="form3Example3cg">Your Email</label>
+                  <input type="email" id="form3Example3cg" class="form-control form-control-lg" name="email" formControlName="smail"  />
+                </div>
+                <div *ngIf="sigupFormControls['smail'].touched && !sigupFormControls['smail'].valid">
+                  <small class="text-danger" *ngIf="sigupFormControls['smail'].errors?.['required']">This field is required</small>
+                  <small class="text-danger" *ngIf="sigupFormControls['smail'].errors?.['pattern']">Email Format: tester@gmail.com</small>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <label class="form-label noselect" for="form3Example4cg">Password</label>
+                  <input type="password" id="form3Example4cg" class="form-control form-control-lg"  name="password" formControlName="spassword" />
+                </div>
+                <div *ngIf="sigupFormControls['spassword'].touched && !sigupFormControls['spassword'].valid">
+                  <small class="text-danger" *ngIf="sigupFormControls['spassword'].errors?.['required']">This field is required</small>
+                  <small class="text-danger" *ngIf="sigupFormControls['spassword'].errors?.['pattern']">paswword Like: a1b2c3 | abcdefg123 | 12345a</small>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <label class="form-label noselect" for="form3Example4cdg">Repeat your password</label>
+                  <input type="password" id="form3Example4cdg" class="form-control form-control-lg"  name="re-password" formControlName="srepassword" />
+                </div>
+                <div *ngIf="sigupFormControls['srepassword'].touched && !sigupFormControls['srepassword'].valid">
+                  <small class="text-danger" *ngIf="sigupFormControls['srepassword'].errors?.['required']">This field is required</small>
+                  <small class="text-danger" *ngIf="sigupFormControls['srepassword'].errors?.['MustMatch']">must match password</small>
+                </div>
+
+                <div class="form-check d-flex justify-content-center mb-5 ">
+                  <input
+                    class="form-check-input me-2"
+                    type="checkbox"
+                    value=""
+                    id="checkbox"
+                    name="check" formControlName="scheck"
+                  />
+                  <label class="form-check-label noselect" for="checkbox">
+                    I agree all statements in Terms of service
+                  </label>
+                </div>
+                <div *ngIf="sigupFormControls['scheck'].touched && !sigupFormControls['scheck'].valid">
+                  <small class="text-danger" *ngIf="sigupFormControls['scheck'].errors?.['required']">Checkbox is required</small>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                  <button type="submit" class="btn btn-outline-dark btn-block btn-lg gradient-custom-4 text-body" [disabled]="!signupForm.valid">Register</button>
+                </div>
+                <p class="text-center text-muted mt-5 mb-0">Have already an account? <a routerLink="/login" class="fw-bold text-body"><u class="text-white">Login here</u></a></p>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

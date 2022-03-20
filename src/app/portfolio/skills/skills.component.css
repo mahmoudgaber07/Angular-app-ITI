@@ -1,0 +1,19 @@
+.skills{
+  background-color: #323139;
+  color: #ffff;
+}
+.list-group-item{
+  background-color: #323139 ;
+  color: #ffff;
+}
+.progress{
+  margin: 10px;
+}
+.noselect {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}

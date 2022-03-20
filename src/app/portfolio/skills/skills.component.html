@@ -1,0 +1,56 @@
+<div class="container-fluid skills p-5">
+  <div class="row text-center">
+    <h2 class="skills noselect">Skills</h2>
+      <p class="text-wrap text-center fs-5 noselect">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum exercitationem quisquam consequatur? Dolores saepe nihil fugit nam quaerat, repudiandae temporibus illum quis doloremque dolor ad asperiores nostrum totam similique mollitia cupiditate. Asperiores sequi alias quisquam officia totam dolorem quibusdam voluptatibus quis ipsa voluptate unde, omnis possimus, odio corporis vel culpa!</p>
+  </div>
+
+<div class="focusSection row pt-5">
+  <div class="col-md-6 text-center">
+    <h2>My Focus</h2>
+    <ul class="list-group-flush">
+      <li class="list-group-item noselect" *ngFor="let foc of focus; let i = index;">{{focus[i]}}</li>
+    </ul>
+  </div>
+
+
+  <div class="skillsSection col-md-6">
+    <div class="row">
+      <ul class="list-group group-flush col-3 text-center text-wrap">
+        <li class="list-group-item w-100 noselect" *ngFor="let skill of skills; let i=index;">{{skills[i]}}</li>
+      </ul>
+      <div class="progressSection col-9 align-items-baseline noselect">
+        <!--html-->
+        <div class="progress" style="height: 30px;">
+          <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <!--Css-->
+        <div class="progress" style="height: 30px;">
+          <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <!--Scss-->
+        <div class="progress" style="height: 30px;">
+          <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <!--JS-->
+        <div class="progress" style="height: 30px;">
+          <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <!--TS-->
+        <div class="progress" style="height: 30px;">
+          <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <!--React-->
+        <div class="progress" style="height: 30px;">
+          <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <!--Angular-->
+        <div class="progress" style="height: 30px;">
+          <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+</div>

@@ -1,0 +1,58 @@
+<section *ngIf="cartLis.length != 0" class="vh-100 p-5">
+  <div class="card-table">
+    <div class="cart-product">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Sno</th>
+            <th>Name</th>
+            <th>Image</th>
+            <th>Price</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cart of cartLis">
+            <td>{{cart.id}}</td>
+            <td>{{cart.title}}</td>
+            <td><img [src]="cart.image" style="max-width: 50px;"/></td>
+            <td>{{cart.price}}</td>
+            <td>
+              <button class="btn btn-danger" (click)="removeItem(cart)"><i class="fa-solid fa-trash-can"></i></button>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr  class="fw-bold">
+            Total
+            <td></td>
+            <td></td>
+            <td>{{curTotal}}</td>
+            <td>
+              <button class="btn btn-danger" (click)="removeAllItems()"><i class="fa-solid fa-trash-can"></i></button>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+</section>
+<section *ngIf="cartLis.length == 0">
+  <div class="container-fluid mt-100">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Cart</h5>
+                </div>
+                <div class="card-body cart">
+                    <div class="col-sm-12 empty-cart-cls text-center"> <img src="https://i.imgur.com/dCdflKN.png" width="130" height="130" class="img-fluid mb-4 mr-3">
+                        <h3><strong>Your Cart is Empty</strong></h3>
+                        <h4>Add something to make me happy :)</h4> <a routerLink="/product" class="btn btn-primary cart-btn-transform m-3" data-abc="true">continue shopping</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>

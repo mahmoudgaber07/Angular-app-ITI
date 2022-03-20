@@ -1,0 +1,9 @@
+<div class="container min-vh-100">
+  <div class="row">
+      <div class="card col-md-3" *ngFor="let product of productsList">
+      <app-product-card [proList]="product"></app-product-card>
+    </div>
+  </div>
+</div>
+<ngx-spinner type="ball-scale-multiple"></ngx-spinner>
+

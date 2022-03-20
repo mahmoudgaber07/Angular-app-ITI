@@ -1,0 +1,8 @@
+<div class="container p-5">
+  <h2 class="portfolioTitle noselect">{{title}}</h2>
+  <div class="row pt-3">
+    <div class="card col-sm-12 col-md-4 shadow p-3 mb-5 rounded text-center noselect" *ngFor="let port of Portfolios; let i = index;" [ngStyle]="{'background-color': i % 2 !=0 ? '#212529' : '#676f76' }">
+      <h2 class="cardTitle m-auto noselect">{{Portfolios[i]}}</h2>
+    </div>
+  </div>
+  </div>

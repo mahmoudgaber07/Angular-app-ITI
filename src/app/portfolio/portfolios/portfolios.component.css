@@ -1,0 +1,21 @@
+.card
+{
+  height: 18rem;
+  color: #ffff;
+  background-color: #212529;
+}
+.cardTitle
+{
+  text-decoration: underline #ffff;
+}
+.portfolioTitle{
+  text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
+}
+.noselect {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
