@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./hero.component.css']
 })
 export class HeroComponent implements OnInit {
-  heroImg: string = "../../assets/img/MahmoudGaber _ LinkedIn.png";
+  heroImg: string = "https://i.ibb.co/x3ffX3C/Mahmoud-Gaber-Linked-In.png";
   name: string = "Mahmoud Gaber";
   job: string = "Front-End Developer";
   constructor(private route:Router) { }
