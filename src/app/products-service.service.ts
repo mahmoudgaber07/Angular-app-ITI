@@ -6,6 +6,6 @@ import { HttpClient } from '@angular/common/http';
 export class ProductsServiceService {
   constructor(private http: HttpClient) { }
   getProdList() {
-    return this.http.get('https://fakestoreapi.com/products')
+    return this.http.get('https://dummyjson.com/products')
   }
 }

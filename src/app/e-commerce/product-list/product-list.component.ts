@@ -16,7 +16,7 @@ export class ProductListComponent implements OnInit {
     this.productsServ.getProdList().subscribe(
       {
         next: data => {
-          this.productsList = data
+          this.productsList = data;
           this.spinner.hide();
       },
         error:error => {

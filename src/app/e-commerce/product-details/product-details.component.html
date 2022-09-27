@@ -1,9 +1,9 @@
 <div class="container min-vh-100">
   <div class="product text-center" *ngFor="let prod of fiterProduct">
-    <div class="img w-50 m-auto " >
-      <img [src]="prod.image" alt="product-image" class="img-fluid w-50">
+    <div class="img w-50 m-auto pt-5" >
+      <img [src]="prod.thumbnail" alt="product-image" class="img-fluid w-50">
     </div>
-    <h3>{{ prod.title }}</h3>
+    <h3 class="pt-5">{{ prod.title }}</h3>
     <p>{{ prod.category }}</p>
     <p>{{ prod.description }}</p>
     <div class="ratings">Rating: {{ prod.rating.rate }} <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i

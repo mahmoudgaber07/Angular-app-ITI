@@ -23,7 +23,7 @@ export class ProductDetailsComponent implements OnInit {
     this.prodServ.getProdList().subscribe({
       next: data => {
         this.productsList = data
-        this.fiterProduct = Array.from(this.productsList.filter((prod: any) => prod.id === Number(this.actRout.id)));
+        this.fiterProduct = Array.from(this.productsList.products.filter((prod: any) => prod.id === Number(this.actRout.id)));
         this.loading.hide()
       },
       error:error => {

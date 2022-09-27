@@ -15,7 +15,7 @@
           <tr *ngFor="let cart of cartLis">
             <td>{{cart.id}}</td>
             <td>{{cart.title}}</td>
-            <td><img [src]="cart.image" style="max-width: 50px;"/></td>
+            <td><img [src]="cart.thumbnail" style="max-width: 50px"/></td>
             <td>{{cart.price}}</td>
             <td>
               <button class="btn btn-danger" (click)="removeItem(cart)"><i class="fa-solid fa-trash-can"></i></button>
